@@ -8,7 +8,6 @@ class EventList extends Component {
                     {this.props.events.map(event => (
                         <EventListItems key={event.id} event= {event} />
                     ))}
-
                 
                 </Fragment>
 				);
