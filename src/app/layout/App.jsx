@@ -1,7 +1,8 @@
 
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import EventDashBoard from '../../features/events/eventDashBoard/EventDashBoard';
 import NavBar from '../../features/NavBar/NavBar';
+import { Container } from 'semantic-ui-react';
 
 
 
@@ -10,11 +11,12 @@ import NavBar from '../../features/NavBar/NavBar';
 class  App extends Component {
   render(){
     return (
-      
-      <div>
-          <NavBar />
+      <Fragment>
+        <NavBar />
+        <Container className='main'>
           <EventDashBoard />
-        </div>
+        </Container>
+      </Fragment>
       
     );
 
