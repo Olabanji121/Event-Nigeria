@@ -1,13 +1,21 @@
+
 import React, {Component} from 'react';
+import EventDashBoard from '../../features/events/eventDashBoard/EventDashBoard';
+import NavBar from '../../features/NavBar/NavBar';
+
+
 
 
 
 class  App extends Component {
   render(){
     return (
-      <div className="App">
-        <h1>Event-Nigeria</h1>
-      </div>
+      
+      <div>
+          <NavBar />
+          <EventDashBoard />
+        </div>
+      
     );
 
   }
