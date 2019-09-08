@@ -3,18 +3,32 @@ import { Segment, Form, Button } from "semantic-ui-react";
 
 class EventForm extends Component {
 
-    state = {
-        title: '',
-        date: '',
-        city: '',
-        venue: '',
-        hostedBy:'',
+	state = {
+		title: '',
+		date: '',
+		city: '',
+		venue: '',
+		hostedBy: '',
 
-    }
+	};
+
+	componentDidMount() {
+		if (this.props.selectedEvent !== null) {
+			this.setState({
+				...this.props.selectedEvent
+			})
+
+		}
+	}
 
     handleFormSubmit = (evt) => {
-        // evt.presentDefault();
-        this.props.createEvent(this.state)
+		// evt.presentDefault();
+		if (this.state.id){
+			this.props.updatedEvent(this.state);
+		} else {
+			this.props.createEvent(this.state);
+		}
+        
     }
 
     handleInputChange = (evt) => {
